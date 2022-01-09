@@ -74,16 +74,14 @@ while ____:
             print("입력값이 부족합니다. 다시 입력해주세요.")
             _____
 
-        tmp_list = []
+        del_cnt = 0
 
-        for i in phonebook:
-            if not i[1] == a:
-                tmp_list._____([i[0], i[1]])
+        for i in _____:
+            if i[1] == a:
+                phonebook._____([_____, _____])
+                del_cnt += 1
 
-        if len(tmp_list)>0:
-            phonebook._____()
-            phonebook = _____
-
+        if del_cnt > 0:
             print("{} 삭제 성공"._____(a))
         else:
             print("{} 번호가 존재하지 않습니다."._____(a))
