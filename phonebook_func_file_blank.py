@@ -75,19 +75,17 @@ def _____():
         _____()
         return
 
-    tmp_list = []
+    del_cnt = 0
 
-    for i in _____:
-        if not i[1] == a:
-            tmp_list.append([i[0], i[1]])
+    for i in phonebook:
+        if i[1] == a:
+            phonebook.remove([i[0], i[1]])
+            del_cnt += 1
 
-    if len(tmp_list)>0:
-        _____.clear()
-        _____ = tmp_list
-
-        print("{} 삭제 성공"._____(a))
+    if del_cnt > 0:
+        print("{} 삭제 성공".format(a))
     else:
-        print("{} 번호가 존재하지 않습니다."._____(a))
+        print("{} 번호가 존재하지 않습니다.".format(a))
 
     _____()
     return
