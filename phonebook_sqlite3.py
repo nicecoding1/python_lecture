@@ -14,7 +14,7 @@ def create_table():
         if rows:
             print(f"DB(테이블) {table_name}이 이미 존재합니다. ")
         else:
-            conn.execute('create table phonebook(no integer primary key autoincrement, name text, hpno text)')
+            cur.execute('create table phonebook(no integer primary key autoincrement, name text, hpno text)')
             conn.commit()
             print("DB(테이블) 생성 성공")
     except:
@@ -112,7 +112,7 @@ def phonebook_delete():
     return
  
 
-print("파이썬 전화번호부 Ver 1.0")
+print("파이썬 전화번호부 Ver 1.2")
 print_menu()
 
 while True:
